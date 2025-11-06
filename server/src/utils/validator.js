@@ -2,7 +2,10 @@
 const validator = {
   // Email validation
   isValidEmail: (email) => {
+    if (!email) return false;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Additional check for consecutive dots
+    if (email.includes('..')) return false;
     return emailRegex.test(email);
   },
 
