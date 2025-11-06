@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -144,9 +144,9 @@
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -203,31 +203,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const mongoose = <span class="cstat-no" title="statement not covered" >require('mongoose');</span>
+<span class="cline-any cline-yes">3x</span></td><td class="text"><pre class="prettyprint lang-js">const mongoose = require('mongoose');
 &nbsp;
-const postSchema = <span class="cstat-no" title="statement not covered" >new mongoose.Schema({</span>
+const postSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, 'Title is required'],
@@ -284,36 +284,36 @@ const postSchema = <span class="cstat-no" title="statement not covered" >new mon
 });
 &nbsp;
 // Index for better query performance
-<span class="cstat-no" title="statement not covered" >postSchema.index({ author: 1, createdAt: -1 });</span>
-<span class="cstat-no" title="statement not covered" >postSchema.index({ title: 'text', content: 'text' });</span>
+postSchema.index({ author: 1, createdAt: -1 });
+postSchema.index({ title: 'text', content: 'text' });
 &nbsp;
 // Virtual for like count
-<span class="cstat-no" title="statement not covered" >postSchema.virtual('likeCount').get(<span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.likes ? this.likes.length : 0;</span>
+postSchema.virtual('likeCount').get(function() {
+  return this.likes ? this.likes.length : <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
 });
 &nbsp;
 // Virtual for comment count
-<span class="cstat-no" title="statement not covered" >postSchema.virtual('commentCount').get(<span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
-<span class="cstat-no" title="statement not covered" >  return this.comments ? this.comments.length : 0;</span>
+postSchema.virtual('commentCount').get(function() {
+  return this.comments ? this.comments.length : <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
 });
 &nbsp;
 // Transform JSON output
-<span class="cstat-no" title="statement not covered" >postSchema.set('toJSON', {</span>
+postSchema.set('toJSON', {
   virtuals: true,
-  transform: <span class="fstat-no" title="function not covered" >fu</span>nction(doc, ret) {
-<span class="cstat-no" title="statement not covered" >    delete ret.__v;</span>
-<span class="cstat-no" title="statement not covered" >    return ret;</span>
+  transform: function(doc, ret) {
+    delete ret.__v;
+    return ret;
   }
 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >module.exports = mongoose.model('Post', postSchema);</span></pre></td></tr></table></pre>
+module.exports = mongoose.model('Post', postSchema);</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-06T13:30:58.780Z
+                at 2025-11-06T14:15:11.474Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

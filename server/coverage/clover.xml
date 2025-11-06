@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1762435858972" clover="3.2.0">
-  <project timestamp="1762435858973" name="All files">
-    <metrics statements="335" coveredstatements="73" conditionals="143" coveredconditionals="54" methods="43" coveredmethods="15" elements="521" coveredelements="142" complexity="0" loc="335" ncloc="335" packages="5" files="10" classes="10"/>
+<coverage generated="1762438511657" clover="3.2.0">
+  <project timestamp="1762438511657" name="All files">
+    <metrics statements="335" coveredstatements="208" conditionals="143" coveredconditionals="80" methods="43" coveredmethods="34" elements="521" coveredelements="322" complexity="0" loc="335" ncloc="335" packages="5" files="10" classes="10"/>
     <package name="src">
       <metrics statements="31" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="server.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\server.js">
@@ -40,24 +40,24 @@
       </file>
     </package>
     <package name="src.middleware">
-      <metrics statements="36" coveredstatements="21" conditionals="20" coveredconditionals="15" methods="3" coveredmethods="2"/>
+      <metrics statements="36" coveredstatements="31" conditionals="20" coveredconditionals="17" methods="3" coveredmethods="3"/>
       <file name="auth.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\middleware\auth.js">
-        <metrics statements="15" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <metrics statements="15" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="9" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
         <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="20" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
       <file name="errorHandler.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\middleware\errorHandler.js">
         <metrics statements="21" coveredstatements="21" conditionals="16" coveredconditionals="15" methods="2" coveredmethods="2"/>
@@ -85,80 +85,80 @@
       </file>
     </package>
     <package name="src.models">
-      <metrics statements="31" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <metrics statements="31" coveredstatements="25" conditionals="6" coveredconditionals="2" methods="7" coveredmethods="6"/>
       <file name="Post.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\models\Post.js">
-        <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="64" count="3" type="stmt"/>
+        <line num="65" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="70" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="74" count="3" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
       </file>
       <file name="User.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\models\User.js">
-        <metrics statements="19" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
+        <metrics statements="19" coveredstatements="13" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="3"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="6" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="50" count="6" type="stmt"/>
         <line num="51" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
         <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
         <line num="58" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
+        <line num="63" count="6" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="68" count="6" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="73" count="6" type="stmt"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="78" count="1" type="stmt"/>
+        <line num="82" count="6" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
-      <metrics statements="185" coveredstatements="0" conditionals="70" coveredconditionals="0" methods="17" coveredmethods="0"/>
+      <metrics statements="185" coveredstatements="100" conditionals="70" coveredconditionals="22" methods="17" coveredmethods="12"/>
       <file name="auth.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\routes\auth.js">
-        <metrics statements="44" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="44" coveredstatements="31" conditionals="12" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="42" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
-        <line num="96" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="93" count="4" type="stmt"/>
+        <line num="95" count="4" type="stmt"/>
+        <line num="96" count="4" type="cond" truecount="1" falsecount="1"/>
         <line num="97" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
-        <line num="107" count="0" type="stmt"/>
-        <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="109" count="0" type="stmt"/>
+        <line num="104" count="4" type="stmt"/>
+        <line num="107" count="4" type="stmt"/>
+        <line num="108" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="109" count="4" type="stmt"/>
         <line num="116" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="117" count="0" type="stmt"/>
         <line num="124" count="0" type="stmt"/>
@@ -167,58 +167,58 @@
         <line num="133" count="0" type="stmt"/>
         <line num="135" count="0" type="stmt"/>
         <line num="151" count="0" type="stmt"/>
-        <line num="161" count="0" type="stmt"/>
-        <line num="162" count="0" type="stmt"/>
-        <line num="163" count="0" type="stmt"/>
+        <line num="161" count="1" type="stmt"/>
+        <line num="162" count="1" type="stmt"/>
+        <line num="163" count="1" type="stmt"/>
         <line num="179" count="0" type="stmt"/>
-        <line num="186" count="0" type="stmt"/>
+        <line num="186" count="1" type="stmt"/>
       </file>
       <file name="posts.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\routes\posts.js">
-        <metrics statements="96" coveredstatements="0" conditionals="36" coveredconditionals="0" methods="9" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="cond" truecount="0" falsecount="2"/>
+        <metrics statements="96" coveredstatements="53" conditionals="36" coveredconditionals="14" methods="9" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="66" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="66" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="67" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
         <line num="77" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
-        <line num="92" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="103" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
+        <line num="92" count="2" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
         <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="109" count="0" type="stmt"/>
         <line num="115" count="0" type="stmt"/>
-        <line num="120" count="0" type="stmt"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="135" count="0" type="stmt"/>
-        <line num="136" count="0" type="stmt"/>
-        <line num="137" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="120" count="2" type="stmt"/>
+        <line num="130" count="1" type="stmt"/>
+        <line num="135" count="2" type="stmt"/>
+        <line num="136" count="2" type="stmt"/>
+        <line num="137" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="138" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="147" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="148" count="0" type="stmt"/>
+        <line num="145" count="2" type="stmt"/>
+        <line num="147" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="148" count="2" type="stmt"/>
         <line num="155" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="156" count="0" type="stmt"/>
         <line num="162" count="0" type="stmt"/>
@@ -229,21 +229,21 @@
         <line num="169" count="0" type="stmt"/>
         <line num="175" count="0" type="stmt"/>
         <line num="181" count="0" type="stmt"/>
-        <line num="191" count="0" type="stmt"/>
-        <line num="192" count="0" type="stmt"/>
-        <line num="193" count="0" type="stmt"/>
-        <line num="195" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="196" count="0" type="stmt"/>
+        <line num="191" count="1" type="stmt"/>
+        <line num="192" count="2" type="stmt"/>
+        <line num="193" count="2" type="stmt"/>
+        <line num="195" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="196" count="2" type="stmt"/>
         <line num="203" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="204" count="0" type="stmt"/>
         <line num="210" count="0" type="stmt"/>
         <line num="212" count="0" type="stmt"/>
         <line num="217" count="0" type="stmt"/>
-        <line num="227" count="0" type="stmt"/>
-        <line num="228" count="0" type="stmt"/>
-        <line num="229" count="0" type="stmt"/>
-        <line num="231" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="232" count="0" type="stmt"/>
+        <line num="227" count="1" type="stmt"/>
+        <line num="228" count="2" type="stmt"/>
+        <line num="229" count="2" type="stmt"/>
+        <line num="231" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="232" count="2" type="stmt"/>
         <line num="239" count="0" type="stmt"/>
         <line num="240" count="0" type="stmt"/>
         <line num="243" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -255,14 +255,14 @@
         <line num="258" count="0" type="stmt"/>
         <line num="260" count="0" type="stmt"/>
         <line num="267" count="0" type="stmt"/>
-        <line num="277" count="0" type="stmt"/>
-        <line num="281" count="0" type="stmt"/>
-        <line num="282" count="0" type="stmt"/>
-        <line num="283" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="277" count="1" type="stmt"/>
+        <line num="281" count="2" type="stmt"/>
+        <line num="282" count="2" type="stmt"/>
+        <line num="283" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="284" count="0" type="stmt"/>
-        <line num="291" count="0" type="stmt"/>
-        <line num="293" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="294" count="0" type="stmt"/>
+        <line num="291" count="2" type="stmt"/>
+        <line num="293" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="294" count="2" type="stmt"/>
         <line num="300" count="0" type="stmt"/>
         <line num="305" count="0" type="stmt"/>
         <line num="306" count="0" type="stmt"/>
@@ -270,21 +270,21 @@
         <line num="311" count="0" type="stmt"/>
         <line num="313" count="0" type="stmt"/>
         <line num="319" count="0" type="stmt"/>
-        <line num="326" count="0" type="stmt"/>
+        <line num="326" count="1" type="stmt"/>
       </file>
       <file name="users.js" path="C:\Users\USER\OneDrive\Desktop\MERN\week-6-Ass\server\src\routes\users.js">
-        <metrics statements="45" coveredstatements="0" conditionals="22" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="1" count="0" type="stmt"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="45" coveredstatements="16" conditionals="22" coveredconditionals="4" methods="4" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="38" count="0" type="stmt"/>
         <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -304,21 +304,21 @@
         <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="80" count="0" type="stmt"/>
         <line num="86" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="97" count="0" type="stmt"/>
-        <line num="98" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="99" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
+        <line num="96" count="1" type="stmt"/>
+        <line num="97" count="3" type="stmt"/>
+        <line num="98" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="99" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="100" count="3" type="stmt"/>
+        <line num="102" count="3" type="stmt"/>
         <line num="108" count="0" type="stmt"/>
         <line num="110" count="0" type="stmt"/>
-        <line num="123" count="0" type="stmt"/>
-        <line num="133" count="0" type="stmt"/>
+        <line num="123" count="3" type="stmt"/>
+        <line num="133" count="1" type="stmt"/>
         <line num="134" count="0" type="stmt"/>
         <line num="135" count="0" type="stmt"/>
         <line num="137" count="0" type="stmt"/>
         <line num="142" count="0" type="stmt"/>
-        <line num="149" count="0" type="stmt"/>
+        <line num="149" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
