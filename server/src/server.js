@@ -5,7 +5,7 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 const connectDB = require('./config/database');
-const errorHandler = require('./middleware/errorHandler');
+const { errorHandler } = require('./middleware/errorHandler');
 const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const postRoutes = require('./routes/posts');

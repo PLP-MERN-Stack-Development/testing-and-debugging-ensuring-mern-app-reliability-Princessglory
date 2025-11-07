@@ -1,12 +1,20 @@
-// posts.test.js - Integration tests for posts API endpoints
-
-const request = require('supertest');
+// Integration tests for posts routes
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
-const app = require('../../src/app');
+const {
+  setupIntegrationTest,
+  teardownIntegrationTest,
+  clearDatabase,
+  createTestUser,
+  createTestPost,
+  getAuthToken,
+  request,
+  generateToken
+} = require('./setup');
+
 const Post = require('../../src/models/Post');
 const User = require('../../src/models/User');
-const { generateToken } = require('../../src/utils/auth');
+const app = require('../../src/server');
 
 let mongoServer;
 let token;
@@ -15,46 +23,37 @@ let postId;
 
 // Setup in-memory MongoDB server before all tests
 beforeAll(async () => {
-  mongoServer = await MongoMemoryServer.create();
-  const mongoUri = mongoServer.getUri();
-  await mongoose.connect(mongoUri);
-
+  await setupIntegrationTest();
+  
   // Create a test user
-  const user = await User.create({
+  const user = await createTestUser({
     username: 'testuser',
     email: 'test@example.com',
-    password: 'password123',
+    password: 'password123'
   });
   userId = user._id;
-  token = generateToken(user);
+  token = getAuthToken(user);
 
   // Create a test post
-  const post = await Post.create({
+  const post = await createTestPost({
     title: 'Test Post',
     content: 'This is a test post content',
     author: userId,
-    category: mongoose.Types.ObjectId(),
-    slug: 'test-post',
+    category: new mongoose.Types.ObjectId(),
+    slug: 'test-post'
   });
   postId = post._id;
 });
 
 // Clean up after all tests
 afterAll(async () => {
-  await mongoose.disconnect();
-  await mongoServer.stop();
+  await teardownIntegrationTest();
 });
 
 // Clean up database between tests
 afterEach(async () => {
   // Keep the test user and post, but clean up any other created data
-  const collections = mongoose.connection.collections;
-  for (const key in collections) {
-    const collection = collections[key];
-    if (collection.collectionName !== 'users' && collection.collectionName !== 'posts') {
-      await collection.deleteMany({});
-    }
-  }
+  await clearDatabase(['users', 'posts']);
 });
 
 describe('POST /api/posts', () => {
@@ -62,7 +61,7 @@ describe('POST /api/posts', () => {
     const newPost = {
       title: 'New Test Post',
       content: 'This is a new test post content',
-      category: mongoose.Types.ObjectId().toString(),
+      category: new mongoose.Types.ObjectId().toString(),
     };
 
     const res = await request(app)
@@ -81,7 +80,7 @@ describe('POST /api/posts', () => {
     const newPost = {
       title: 'Unauthorized Post',
       content: 'This should not be created',
-      category: mongoose.Types.ObjectId().toString(),
+      category: new mongoose.Types.ObjectId().toString(),
     };
 
     const res = await request(app)
@@ -95,7 +94,7 @@ describe('POST /api/posts', () => {
     const invalidPost = {
       // Missing title
       content: 'This post is missing a title',
-      category: mongoose.Types.ObjectId().toString(),
+      category: new mongoose.Types.ObjectId().toString(),
     };
 
     const res = await request(app)
@@ -118,15 +117,15 @@ describe('GET /api/posts', () => {
   });
 
   it('should filter posts by category', async () => {
-    const categoryId = mongoose.Types.ObjectId().toString();
+    const categoryId = new mongoose.Types.ObjectId().toString();
     
     // Create a post with specific category
-    await Post.create({
+    await createTestPost({
       title: 'Filtered Post',
       content: 'This post should be filtered by category',
       author: userId,
       category: categoryId,
-      slug: 'filtered-post',
+      slug: 'filtered-post'
     });
 
     const res = await request(app)
@@ -146,7 +145,7 @@ describe('GET /api/posts', () => {
         title: `Pagination Post ${i}`,
         content: `Content for pagination test ${i}`,
         author: userId,
-        category: mongoose.Types.ObjectId(),
+        category: new mongoose.Types.ObjectId(),
         slug: `pagination-post-${i}`,
       });
     }
@@ -177,7 +176,7 @@ describe('GET /api/posts/:id', () => {
   });
 
   it('should return 404 for non-existent post', async () => {
-    const nonExistentId = mongoose.Types.ObjectId();
+    const nonExistentId = new mongoose.Types.ObjectId();
     const res = await request(app)
       .get(`/api/posts/${nonExistentId}`);
 
@@ -216,12 +215,12 @@ describe('PUT /api/posts/:id', () => {
 
   it('should return 403 if not the author', async () => {
     // Create another user
-    const anotherUser = await User.create({
+    const anotherUser = await createTestUser({
       username: 'anotheruser',
       email: 'another@example.com',
-      password: 'password123',
+      password: 'password123'
     });
-    const anotherToken = generateToken(anotherUser);
+    const anotherToken = getAuthToken(anotherUser);
 
     const updates = {
       title: 'Forbidden Update',
